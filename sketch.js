@@ -9,13 +9,13 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight); // A1 size canvas
+  createCanvas(windowWidth, windowHeight); 
   textInput = select('#textInput');
   updateSpots(textInput.value().trim()); 
 }
 
 function draw() {
-  background(255); // White background
+  background(255); 
   drawWaterRipples();   
 
   let currentText = textInput.value().trim();
@@ -26,7 +26,7 @@ function draw() {
 
   if (spots.length === 0) return;
 
-  let count = 5; // Increase this for faster bubble creation
+  let count = 5; 
   for (let i = 0; i < count; i++) {
     let newC = createNewCircle();
     if (newC !== null) {
